@@ -1,0 +1,14 @@
+# Postgres MCP — query DB จาก Codex
+# ใช้ env var สำหรับ connection string (อย่าใส่ password ตรงนี้)
+
+[[mcp_servers]]
+name = "postgres"
+command = "npx"
+args = [
+  "-y",
+  "@modelcontextprotocol/server-postgres",
+  "$DATABASE_URL",
+]
+
+# ตัวอย่าง $DATABASE_URL (ใส่ใน shell หรือ direnv):
+#   export DATABASE_URL="postgres://user:pass@localhost:5432/mydb"

@@ -1,0 +1,8 @@
+# GitHub MCP — ทำให้ Codex อ่าน/แก้ issues, PR, repo metadata
+# ต้องตั้ง $GH_TOKEN ใน env (อย่าเขียน token ตรงนี้)
+
+[[mcp_servers]]
+name = "github"
+command = "npx"
+args = ["-y", "@modelcontextprotocol/server-github"]
+env = { GITHUB_PERSONAL_ACCESS_TOKEN = "$GH_TOKEN" }

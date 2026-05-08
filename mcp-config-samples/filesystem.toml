@@ -1,0 +1,14 @@
+# DEPRECATED — Lab 6A ตอนนี้ใช้ context7.toml แทน
+# เก็บไฟล์นี้ไว้เป็น reference สำหรับ filesystem MCP เผื่อใช้ใน custom workflow
+#
+# filesystem MCP — ทำให้ Codex เข้าถึง folder นอก sandbox ได้
+# (ต้องสร้าง folder + ไฟล์ก่อน แล้วชี้ path)
+
+[[mcp_servers]]
+name = "fs"
+command = "npx"
+args = [
+  "-y",
+  "@modelcontextprotocol/server-filesystem",
+  "/tmp/codex-mcp-test",
+]

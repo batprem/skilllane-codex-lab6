@@ -1,0 +1,19 @@
+# Context7 MCP — append to ~/.codex/config.toml
+# ดึง live documentation ของ library ใด ก็ได้ (FastAPI, Drizzle, Next.js, ...)
+# ไม่ต้องใช้ API key สำหรับ basic usage
+
+# วิธี A — STDIO (แนะนำ — ทำงาน offline ก็ได้ถ้า cache แล้ว)
+[[mcp_servers]]
+name = "context7"
+command = "npx"
+args = ["-y", "@upstash/context7-mcp"]
+
+# วิธี B — HTTP (ถ้า prefer remote server, ตัดออกถ้าไม่ใช้)
+# [[mcp_servers]]
+# name = "context7"
+# type = "http"
+# url = "https://mcp.context7.com/mcp"
+
+# Tools ที่ Context7 ให้:
+#   resolve-library-id   — ค้นชื่อ library → ได้ library ID
+#   get-library-docs     — ดึง docs ของ library ID นั้น (พร้อม version ล่าสุด)
